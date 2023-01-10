@@ -1,7 +1,7 @@
+import 'package:dribble_ui_flutter_5/koala_hero_section_app/web_koala_main_page.dart';
 
-import 'package:dribble_ui_flutter_5/video_profile_app/video_main_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const VideoProfile());
+  runApp(const KoalaWebApp());
 }
