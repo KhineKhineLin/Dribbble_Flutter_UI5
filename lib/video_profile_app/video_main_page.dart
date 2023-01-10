@@ -51,7 +51,7 @@ class _VPMainPageState extends State<VPMainPage> {
     return Scaffold(
       body: SlidingUpPanel(
         maxHeight: 680,
-        minHeight: 120,
+        minHeight: 140,
         borderRadius: const BorderRadius.only(
             topRight: Radius.circular(32), topLeft: Radius.circular(32)),
         panel: SingleChildScrollView(
@@ -69,9 +69,9 @@ class _VPMainPageState extends State<VPMainPage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 42.0, right: 42, top: 16),
+                padding: const EdgeInsets.only(left: 52.0, right: 52, top: 16),
                 child: Container(
-                  height: MediaQuery.of(context).size.height / 6,
+                  height: MediaQuery.of(context).size.height / 7,
                   child: Row(
                     children: [
                       Expanded(
@@ -182,7 +182,8 @@ class _VPMainPageState extends State<VPMainPage> {
                           child: Row(
                             children: [
                               Container(
-                                margin: EdgeInsets.only(bottom: 16, right: 8),
+                                margin:
+                                    const EdgeInsets.only(bottom: 16, right: 8),
                                 width: 160,
                                 decoration: BoxDecoration(
                                     color: Colors.white,
@@ -194,15 +195,45 @@ class _VPMainPageState extends State<VPMainPage> {
                                           spreadRadius: 2,
                                           offset: const Offset(0, 4))
                                     ]),
+                                padding: const EdgeInsets.only(
+                                    left: 24, top: 24, bottom: 24),
                                 child: Column(
-                                  children: [],
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: const [
+                                    Text.rich(TextSpan(children: [
+                                      TextSpan(
+                                          text: '9.7',
+                                          style: TextStyle(
+                                              color: Colors.blue,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 42)),
+                                      TextSpan(
+                                          text: '/10',
+                                          style: TextStyle(
+                                              color: Colors.blue,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 14,
+                                              textBaseline:
+                                                  TextBaseline.ideographic))
+                                    ])),
+                                    Spacer(),
+                                    Text(
+                                      'Assessment\nScore',
+                                      style: TextStyle(
+                                          color: Colors.blue,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 13),
+                                    )
+                                  ],
                                 ),
                               ),
                               Container(
-                                margin: EdgeInsets.only(bottom: 16, right: 8),
+                                margin:
+                                    const EdgeInsets.only(bottom: 16, right: 8),
                                 width: 160,
                                 decoration: BoxDecoration(
                                     color: Colors.white,
+                                    borderRadius: BorderRadius.circular(16),
                                     boxShadow: [
                                       BoxShadow(
                                           color: Colors.black.withOpacity(0.1),
@@ -210,8 +241,28 @@ class _VPMainPageState extends State<VPMainPage> {
                                           spreadRadius: 2,
                                           offset: const Offset(0, 4))
                                     ]),
+                                padding: const EdgeInsets.only(
+                                    left: 24, top: 24, bottom: 24),
                                 child: Column(
-                                  children: [],
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: const [
+                                    Text.rich(TextSpan(children: [
+                                      TextSpan(
+                                          text: '12',
+                                          style: TextStyle(
+                                              color: Colors.black87,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 42)),
+                                    ])),
+                                    Spacer(),
+                                    Text(
+                                      'Years\nWith Pepsico',
+                                      style: TextStyle(
+                                          color: Colors.black87,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 13),
+                                    )
+                                  ],
                                 ),
                               )
                             ],
@@ -221,8 +272,59 @@ class _VPMainPageState extends State<VPMainPage> {
                 ),
               ),
               Container(
-                height: MediaQuery.of(context).size.height / 2.8,
-                child: Placeholder(),
+                margin: const EdgeInsets.only(top: 32),
+                height: MediaQuery.of(context).size.height / 3,
+                padding: const EdgeInsets.only(left: 24),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Previous Companies',
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    Container(
+                      height: 224,
+                      child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index) {
+                            return Card(
+                              elevation: 12,
+                              margin: const EdgeInsets.only(
+                                  right: 8, top: 8, bottom: 8),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: Container(
+                                width: 160,
+                                decoration: const BoxDecoration(),
+                                padding: const EdgeInsets.all(16),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: const [
+                                    CircleAvatar(),
+                                    Spacer(),
+                                    Text(
+                                      'Vodafone',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Text(
+                                      'Group HR Director',
+                                      style: TextStyle(fontSize: 12),
+                                    ),
+                                    Text(
+                                      'Dec 2005 - Mar 2008',
+                                      style: TextStyle(fontSize: 12),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            );
+                          }),
+                    )
+                  ],
+                ),
               )
             ],
           ),
@@ -241,7 +343,7 @@ class _VPMainPageState extends State<VPMainPage> {
                       )),
             Positioned(
                 left: 24,
-                bottom: 140,
+                bottom: 172,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
