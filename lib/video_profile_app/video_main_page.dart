@@ -50,9 +50,182 @@ class _VPMainPageState extends State<VPMainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SlidingUpPanel(
-        maxHeight: 620,
-        panel: const Center(
-          child: Text('This is the sliding Widget'),
+        maxHeight: 680,
+        minHeight: 120,
+        borderRadius: const BorderRadius.only(
+            topRight: Radius.circular(32), topLeft: Radius.circular(32)),
+        panel: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                height: MediaQuery.of(context).size.height / 32,
+                child: Center(
+                  child: Container(
+                    height: 4,
+                    width: 58,
+                    decoration: BoxDecoration(color: Colors.grey.shade200),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 42.0, right: 42, top: 16),
+                child: Container(
+                  height: MediaQuery.of(context).size.height / 6,
+                  child: Row(
+                    children: [
+                      Expanded(
+                          child: Padding(
+                        padding: const EdgeInsets.only(right: 16.0),
+                        child: Column(
+                          children: [
+                            Expanded(
+                                flex: 5,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      color: Colors.blue.shade200,
+                                      borderRadius: BorderRadius.circular(12)),
+                                  child: const Center(
+                                    child: Icon(
+                                      Icons.account_circle,
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                )),
+                            const Expanded(
+                                flex: 2,
+                                child: Center(
+                                  child: Text('LinkedIn'),
+                                ))
+                          ],
+                        ),
+                      )),
+                      Expanded(
+                          child: Padding(
+                        padding: const EdgeInsets.only(right: 8.0, left: 8),
+                        child: Column(
+                          children: [
+                            Expanded(
+                              flex: 5,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.pink.shade200,
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: const Center(
+                                  child: Icon(
+                                    Icons.email,
+                                    color: Colors.pink,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const Expanded(
+                                flex: 2,
+                                child: Center(
+                                  child: Text('Email'),
+                                ))
+                          ],
+                        ),
+                      )),
+                      Expanded(
+                          child: Padding(
+                        padding: const EdgeInsets.only(right: 8.0, left: 8),
+                        child: Column(
+                          children: [
+                            Expanded(
+                                flex: 5,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      color: Colors.purple.shade200,
+                                      borderRadius: BorderRadius.circular(12)),
+                                  child: const Center(
+                                    child: Icon(
+                                      Icons.call,
+                                      color: Colors.purple,
+                                    ),
+                                  ),
+                                )),
+                            const Expanded(
+                                flex: 2,
+                                child: Center(
+                                  child: Text('Call'),
+                                ))
+                          ],
+                        ),
+                      ))
+                    ],
+                  ),
+                ),
+              ),
+              const Divider(
+                thickness: 2,
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              Container(
+                height: MediaQuery.of(context).size.height / 3.5,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Expanded(
+                          flex: 2,
+                          child: Text(
+                            'About',
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          )),
+                      Expanded(
+                          flex: 10,
+                          child: Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(bottom: 16, right: 8),
+                                width: 160,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(16),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.black.withOpacity(0.1),
+                                          blurRadius: 4,
+                                          spreadRadius: 2,
+                                          offset: const Offset(0, 4))
+                                    ]),
+                                child: Column(
+                                  children: [],
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(bottom: 16, right: 8),
+                                width: 160,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.black.withOpacity(0.1),
+                                          blurRadius: 4,
+                                          spreadRadius: 2,
+                                          offset: const Offset(0, 4))
+                                    ]),
+                                child: Column(
+                                  children: [],
+                                ),
+                              )
+                            ],
+                          ))
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                height: MediaQuery.of(context).size.height / 2.8,
+                child: Placeholder(),
+              )
+            ],
+          ),
         ),
         body: Stack(
           children: [
@@ -114,6 +287,16 @@ class _VPMainPageState extends State<VPMainPage> {
           ],
         ),
       ),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(top: 160.0),
+        child: FloatingActionButton(
+          child: const Icon(Icons.stop),
+          onPressed: () {
+            _videoPlayerController.pause();
+          },
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.miniStartTop,
     );
   }
 }
