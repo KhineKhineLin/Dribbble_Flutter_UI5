@@ -80,11 +80,7 @@ class _MainPageState extends State<MainPage> {
                                     ],
                                   ),
                                 )),
-                            Expanded(
-                                flex: 2,
-                                child: Container(
-                                  color: Colors.green,
-                                ))
+                            Expanded(flex: 2, child: Container())
                           ],
                         ),
                       )),
@@ -249,6 +245,8 @@ class _MainPageState extends State<MainPage> {
                 decoration: const BoxDecoration(color: Colors.grey),
                 child: Center(
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: const [
                       Text(
                         'WATCH NOW!',
