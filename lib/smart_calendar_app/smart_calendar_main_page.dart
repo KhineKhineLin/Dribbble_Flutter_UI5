@@ -194,6 +194,150 @@ class _HomePageState extends State<HomePage> {
                       )),
                 ],
               ),
+            ),
+            const SizedBox(
+              height: 28,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 24.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: const [
+                      Text(
+                        'Mon,',
+                        style: TextStyle(
+                            fontSize: 32, fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        ' 27th Oct',
+                        style: TextStyle(fontSize: 32),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 9,
+                  ),
+                  const Text(
+                    '3 Events',
+                    style: TextStyle(fontSize: 12, color: Colors.grey),
+                  )
+                ],
+              ),
+            ),
+            ListView(
+              shrinkWrap: true,
+              children: [
+                Container(
+                  padding: const EdgeInsets.only(left: 24),
+                  height: 200,
+                  child: Row(
+                    children: [
+                      Expanded(
+                          flex: 3,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text(
+                                '11:00',
+                                style: TextStyle(color: Colors.black54),
+                              ),
+                              Container(
+                                height: 2,
+                                width: 18,
+                                decoration:
+                                    const BoxDecoration(color: Colors.grey),
+                              ),
+                              Container(
+                                height: 2,
+                                width: 32,
+                                decoration:
+                                    const BoxDecoration(color: Colors.grey),
+                              ),
+                              Container(
+                                height: 2,
+                                width: 18,
+                                decoration:
+                                    const BoxDecoration(color: Colors.grey),
+                              ),
+                              const Text(
+                                '12:00',
+                                style: TextStyle(color: Colors.black54),
+                              )
+                            ],
+                          )),
+                      Expanded(
+                          flex: 7,
+                          child: Container(
+                            padding: const EdgeInsets.only(
+                                left: 24, top: 32, bottom: 0),
+                            margin: const EdgeInsets.only(top: 7),
+                            decoration: BoxDecoration(
+                                color: Colors.blue[100],
+                                borderRadius: const BorderRadius.only(
+                                    bottomLeft: Radius.circular(12))),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  'Meeting with Jon',
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                                const SizedBox(
+                                  height: 8,
+                                ),
+                                const Text(
+                                  '13:00 - 14:00',
+                                  style: TextStyle(fontSize: 13),
+                                ),
+                                const SizedBox(
+                                  height: 16,
+                                ),
+                                Row(
+                                  children: const [
+                                    Icon(
+                                      Icons.add_location,
+                                      color: Colors.grey,
+                                      size: 12,
+                                    ),
+                                    SizedBox(
+                                      width: 8,
+                                    ),
+                                    Text(
+                                      'Texas, United States',
+                                      style: TextStyle(
+                                          color: Colors.grey, fontSize: 12),
+                                    )
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 24,
+                                ),
+                                Container(
+                                  height: 38,
+                                  width: 80,
+                                  child: Stack(
+                                    children: const [
+                                      Positioned(
+                                          left: 24,
+                                          top: 0,
+                                          bottom: 0,
+                                          child: CircleAvatar()),
+                                      CircleAvatar(
+                                        backgroundColor: Colors.red,
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ))
+                    ],
+                  ),
+                )
+              ],
             )
           ],
         ),
