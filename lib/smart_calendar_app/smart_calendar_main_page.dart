@@ -226,121 +226,450 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            ListView(
-              shrinkWrap: true,
-              children: [
-                Container(
-                  padding: const EdgeInsets.only(left: 24),
-                  height: 200,
-                  child: Row(
-                    children: [
-                      Expanded(
-                          flex: 3,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text(
-                                '11:00',
-                                style: TextStyle(color: Colors.black54),
-                              ),
-                              Container(
-                                height: 2,
-                                width: 18,
-                                decoration:
-                                    const BoxDecoration(color: Colors.grey),
-                              ),
-                              Container(
-                                height: 2,
-                                width: 32,
-                                decoration:
-                                    const BoxDecoration(color: Colors.grey),
-                              ),
-                              Container(
-                                height: 2,
-                                width: 18,
-                                decoration:
-                                    const BoxDecoration(color: Colors.grey),
-                              ),
-                              const Text(
-                                '12:00',
-                                style: TextStyle(color: Colors.black54),
-                              )
-                            ],
-                          )),
-                      Expanded(
-                          flex: 7,
-                          child: Container(
-                            padding: const EdgeInsets.only(
-                                left: 24, top: 32, bottom: 0),
-                            margin: const EdgeInsets.only(top: 7),
-                            decoration: BoxDecoration(
-                                color: Colors.blue[100],
-                                borderRadius: const BorderRadius.only(
-                                    bottomLeft: Radius.circular(12))),
+            Container(
+              height: MediaQuery.of(context).size.height,
+              child: ListView(
+                shrinkWrap: true,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.only(left: 24),
+                    height: 200,
+                    child: Row(
+                      children: [
+                        Expanded(
+                            flex: 3,
                             child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  'Meeting with Jon',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                                const SizedBox(
-                                  height: 8,
-                                ),
-                                const Text(
-                                  '13:00 - 14:00',
-                                  style: TextStyle(fontSize: 13),
-                                ),
-                                const SizedBox(
-                                  height: 16,
-                                ),
-                                Row(
-                                  children: const [
-                                    Icon(
-                                      Icons.add_location,
-                                      color: Colors.grey,
-                                      size: 12,
-                                    ),
-                                    SizedBox(
-                                      width: 8,
-                                    ),
-                                    Text(
-                                      'Texas, United States',
-                                      style: TextStyle(
-                                          color: Colors.grey, fontSize: 12),
-                                    )
-                                  ],
-                                ),
-                                const SizedBox(
-                                  height: 24,
+                                  '11:00',
+                                  style: TextStyle(color: Colors.black54),
                                 ),
                                 Container(
-                                  height: 38,
-                                  width: 80,
-                                  child: Stack(
-                                    children: const [
-                                      Positioned(
-                                          left: 24,
-                                          top: 0,
-                                          bottom: 0,
-                                          child: CircleAvatar()),
-                                      CircleAvatar(
-                                        backgroundColor: Colors.red,
-                                      ),
-                                    ],
-                                  ),
+                                  height: 2,
+                                  width: 18,
+                                  decoration:
+                                      const BoxDecoration(color: Colors.grey),
+                                ),
+                                Container(
+                                  height: 2,
+                                  width: 32,
+                                  decoration:
+                                      const BoxDecoration(color: Colors.grey),
+                                ),
+                                Container(
+                                  height: 2,
+                                  width: 18,
+                                  decoration:
+                                      const BoxDecoration(color: Colors.grey),
+                                ),
+                                const Text(
+                                  '12:00',
+                                  style: TextStyle(color: Colors.black54),
                                 )
                               ],
-                            ),
-                          ))
-                    ],
+                            )),
+                        Expanded(
+                            flex: 7,
+                            child: Container(
+                              padding: const EdgeInsets.only(
+                                  left: 24, top: 32, bottom: 0),
+                              margin: const EdgeInsets.only(top: 7),
+                              decoration: BoxDecoration(
+                                  color: Colors.blue[100],
+                                  borderRadius: const BorderRadius.only(
+                                      bottomLeft: Radius.circular(12))),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Text(
+                                    'Meeting with Jon',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  const Text(
+                                    '13:00 - 14:00',
+                                    style: TextStyle(fontSize: 13),
+                                  ),
+                                  const SizedBox(
+                                    height: 16,
+                                  ),
+                                  Row(
+                                    children: const [
+                                      Icon(
+                                        Icons.add_location,
+                                        color: Colors.grey,
+                                        size: 12,
+                                      ),
+                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                      Text(
+                                        'Texas, United States',
+                                        style: TextStyle(
+                                            color: Colors.grey, fontSize: 12),
+                                      )
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 24,
+                                  ),
+                                  Container(
+                                    height: 38,
+                                    width: 80,
+                                    child: Stack(
+                                      children: const [
+                                        Positioned(
+                                            left: 24,
+                                            top: 0,
+                                            bottom: 0,
+                                            child: CircleAvatar()),
+                                        CircleAvatar(
+                                          backgroundColor: Colors.red,
+                                        ),
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ))
+                      ],
+                    ),
                   ),
-                )
-              ],
+                  Container(
+                    margin: const EdgeInsets.only(
+                        top: 8, bottom: 8, right: 24, left: 24),
+                    height: 80,
+                    child: Row(
+                      children: [
+                        Expanded(
+                            flex: 3,
+                            child: Stack(
+                              children: [
+                                Positioned(
+                                    top: 40,
+                                    left: 0,
+                                    right: 24,
+                                    child: Container(
+                                      height: 2,
+                                      color: const Color(0xff1849EC),
+                                    )),
+                                Positioned(
+                                    top: 36,
+                                    right: 24,
+                                    child: Container(
+                                      height: 10,
+                                      width: 10,
+                                      decoration: const BoxDecoration(
+                                          color: Color(0xff1849EC),
+                                          shape: BoxShape.circle),
+                                    ))
+                              ],
+                            )),
+                        Expanded(
+                            flex: 7,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                const Text(
+                                  '12:29',
+                                  style: TextStyle(
+                                      color: Colors.grey, fontSize: 24),
+                                ),
+                                const SizedBox(
+                                  width: 15,
+                                ),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: const [
+                                    Text(
+                                      'Next event in',
+                                      style: TextStyle(
+                                          color: Colors.grey,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    SizedBox(
+                                      height: 4,
+                                    ),
+                                    Text(
+                                      '31 minutes',
+                                      style: TextStyle(
+                                          color: Colors.orange,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12),
+                                    )
+                                  ],
+                                )
+                              ],
+                            ))
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.only(left: 24),
+                    height: 240,
+                    child: Row(
+                      children: [
+                        Expanded(
+                            flex: 3,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  '13:00',
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                                Container(
+                                  height: 2,
+                                  width: 18,
+                                  decoration:
+                                      const BoxDecoration(color: Colors.grey),
+                                ),
+                                Container(
+                                  height: 2,
+                                  width: 32,
+                                  decoration:
+                                      const BoxDecoration(color: Colors.grey),
+                                ),
+                                Container(
+                                  height: 2,
+                                  width: 18,
+                                  decoration:
+                                      const BoxDecoration(color: Colors.grey),
+                                ),
+                                const Text(
+                                  '14:00',
+                                  style: TextStyle(color: Colors.black54),
+                                )
+                              ],
+                            )),
+                        Expanded(
+                            flex: 7,
+                            child: Container(
+                              padding: const EdgeInsets.only(
+                                  left: 24, top: 32, bottom: 0),
+                              margin: const EdgeInsets.only(top: 7),
+                              decoration: const BoxDecoration(
+                                  color: Color(0xFF1849EC),
+                                  borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(12))),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Text(
+                                    'Design Project Meeting',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white),
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  const Text(
+                                    '13:00 - 14:00',
+                                    style: TextStyle(
+                                        fontSize: 13, color: Colors.white),
+                                  ),
+                                  const SizedBox(
+                                    height: 16,
+                                  ),
+                                  Row(
+                                    children: const [
+                                      Icon(
+                                        Icons.add_location,
+                                        color: Colors.grey,
+                                        size: 12,
+                                      ),
+                                      SizedBox(
+                                        width: 8,
+                                      ),
+                                      Text(
+                                        'Texas, United States',
+                                        style: TextStyle(
+                                            color: Colors.grey, fontSize: 12),
+                                      )
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 24,
+                                  ),
+                                  Container(
+                                    height: 38,
+                                    width: 80,
+                                    child: Stack(
+                                      children: const [
+                                        Positioned(
+                                            left: 24,
+                                            top: 0,
+                                            bottom: 0,
+                                            child: CircleAvatar()),
+                                        CircleAvatar(
+                                          backgroundColor: Colors.red,
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 16,
+                                  ),
+                                  const Divider(
+                                    color: Colors.white,
+                                    thickness: 0.5,
+                                    height: 0,
+                                  ),
+                                  Container(
+                                    height: 54,
+                                    child: Row(
+                                      children: [
+                                        const Expanded(
+                                            flex: 1,
+                                            child: Center(
+                                              child: Text(
+                                                'Running Late',
+                                                style: TextStyle(
+                                                    color: Colors.white),
+                                              ),
+                                            )),
+                                        Expanded(
+                                            flex: 1,
+                                            child: Container(
+                                              decoration: const BoxDecoration(
+                                                  color: Colors.white,
+                                                  borderRadius:
+                                                      BorderRadius.only(
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  16))),
+                                              child: const Center(
+                                                child: Text(
+                                                  'See Navigation',
+                                                  style: TextStyle(
+                                                      color: Color(0xFF1849EC)),
+                                                ),
+                                              ),
+                                            ))
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ))
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 24),
+                    padding: const EdgeInsets.only(left: 24),
+                    height: 160,
+                    child: Row(
+                      children: [
+                        Expanded(
+                            flex: 3,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  height: 2,
+                                  width: 18,
+                                  decoration:
+                                      const BoxDecoration(color: Colors.grey),
+                                ),
+                                Container(
+                                  height: 2,
+                                  width: 32,
+                                  decoration:
+                                      const BoxDecoration(color: Colors.grey),
+                                ),
+                                Container(
+                                  height: 2,
+                                  width: 18,
+                                  decoration:
+                                      const BoxDecoration(color: Colors.grey),
+                                ),
+                                const Text(
+                                  '17:00',
+                                  style: TextStyle(color: Colors.black54),
+                                )
+                              ],
+                            )),
+                        Expanded(
+                            flex: 7,
+                            child: Container(
+                              padding: const EdgeInsets.only(
+                                  left: 24, top: 32, bottom: 0),
+                              decoration: const BoxDecoration(
+                                  color: Colors.blueGrey,
+                                  borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(12))),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Text(
+                                    'Things to do',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black),
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  const Text(
+                                    '3 hours free',
+                                    style: TextStyle(
+                                        fontSize: 13, color: Colors.orange),
+                                  ),
+                                  const SizedBox(
+                                    height: 16,
+                                  ),
+                                  RichText(
+                                      text: TextSpan(children: [
+                                    const TextSpan(
+                                        text: '1) Call',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                        )),
+                                    TextSpan(
+                                        text: ' mom',
+                                        style: TextStyle(
+                                            color:
+                                                Colors.black.withOpacity(0.5)))
+                                  ])),
+                                  RichText(
+                                      text: TextSpan(children: [
+                                    const TextSpan(
+                                        text: '2) Visit',
+                                        style: TextStyle(color: Colors.black)),
+                                    TextSpan(
+                                        text: ' dentist',
+                                        style: TextStyle(
+                                            color:
+                                                Colors.black.withOpacity(0.5)))
+                                  ]))
+                                ],
+                              ),
+                            ))
+                      ],
+                    ),
+                  )
+                ],
+              ),
             )
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        backgroundColor: Colors.black,
+        onPressed: () {},
+        tooltip: 'Add',
       ),
     );
   }
